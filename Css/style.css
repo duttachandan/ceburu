@@ -153,6 +153,14 @@ nav .primary-btn {
   font-weight: 500;
 }
 
+nav .primary-btn span {
+  transition: 0.5s linear;
+}
+
+nav .primary-btn:hover span {
+  color: white;
+}
+
 .menu-bar {
   display: none;
 }
@@ -165,11 +173,19 @@ Banner Section
 
 .banner-section {
   min-height: 100vh;
-  background: url("../assets/1114951_Man_Woman_1280x720.gif") no-repeat
-    center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.banner-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .banner-wrpr .title-1 {
@@ -211,12 +227,12 @@ Banner Section
     flex-direction: column;
     /* background: ; */
     transition: 0.5s linear;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2);
     height: 100vh;
     justify-content: center;
     align-items: center;
     width: 60%;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(30px);
     z-index: 4;
   }
 
@@ -227,7 +243,7 @@ Banner Section
   .sm-navbar-btn {
     display: flex !important;
     margin-left: auto;
-    margin-right:20px;
+    margin-right: 20px;
   }
 
   .navbar-collapsed > ul {
@@ -236,7 +252,7 @@ Banner Section
   }
 
   .nav-item {
-    margin-left: 0px;
+    margin-right: 0px;
     margin-bottom: 20px;
   }
 
@@ -247,17 +263,6 @@ Banner Section
     z-index: 99;
   }
 
-  .menu-bar::after {
-    content: "";
-    position: absolute;
-    height: 1.5px;
-    width: 30px;
-    background: var(--secondary-color);
-    left: 0;
-    top: 8px;
-    transition: 0.5s linear;
-  }
-
   .menu-bar::before {
     content: "";
     position: absolute;
@@ -265,7 +270,7 @@ Banner Section
     width: 30px;
     background: var(--secondary-color);
     left: 0;
-    bottom: 0;
+    top: 4px;
     transition: 0.5s linear;
   }
 
@@ -277,19 +282,55 @@ Banner Section
     transition: 0.5s linear;
   }
 
-  #menu:checked ~ .menu-bar::after {
+  /* #menu:checked ~ .menu-bar::after {
     display: none;
-  }
+  } */
 
   #menu:checked ~ .menu-bar::before {
-    transform: rotate(45deg) translateX(-5px);
+    transform: rotate(45deg) translateX(5px);
+    background: white;
   }
 
   #menu:checked ~ .menu-bar > span {
-    transform: rotate(-45deg) translateX(-5px);
+    transform: rotate(-45deg) translateX(5px);
+    background: white;
   }
 
   #menu:checked ~ .navbar-collapsed {
     right: 0%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title-1 {
+    font-size: 32px;
+  }
+  .primary-btn,
+  .secondary-btn {
+    padding: 10px 15px;
+  }
+  .primary-btn,
+  .secondary-btn {
+    font-size: 12px !important;
+  }
+
+  /* Header Section */
+  .navbar-brand {
+    width: 140px;
+  }
+
+  .navbar-btn > .primary-btn {
+    margin-left: 10px !important;
+  }
+
+  /* Banner Section */
+  .banner-btn {
+    flex-direction: column;
+    align-items: start !important;
+    justify-content: start;
+  }
+  .banner-btn .primary-btn {
+    margin-left: 0px !important;
+    margin-top: 30px;
   }
 }
