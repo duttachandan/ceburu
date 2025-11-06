@@ -33,6 +33,17 @@ ul {
   padding: 0 15px;
 }
 
+.col-50 {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
 .primary-btn {
   padding: 23px 27px 22px;
   border-radius: 50px;
@@ -79,7 +90,7 @@ ul {
 
 .primary-btn:hover::after,
 .secondary-btn:hover::after {
-  transform: scale(40);
+  transform: scale(80);
 }
 
 .secondary-btn:hover span {
@@ -91,6 +102,12 @@ ul {
   font-size: 72px;
   font-weight: 500;
   line-height: calc(72 / 72);
+}
+
+.title2 {
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 1;
 }
 
 /* 
@@ -219,6 +236,94 @@ Banner Section
   display: none;
 }
 
+/* 
+============
+spprt-section
+============
+*/
+
+.spprt-sec {
+  padding: 120px 0;
+}
+
+.spprt-row {
+  align-items: center;
+}
+
+.spprt-img {
+  max-width: 745px;
+  position: relative;
+}
+
+.spprt-img::after {
+  content: "";
+  height: 335px;
+  width: 335px;
+  background: var(--primary-color);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(500px);
+  z-index: -1;
+}
+
+.spprt-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.spprt-cntn {
+  max-width: 497px;
+}
+
+.subtitle {
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.spprt-cntn .title2 {
+  max-width: 380px;
+  margin-top: 15px;
+  margin-bottom: 31px;
+}
+
+.spprt-cntn p {
+  line-height: calc(24 / 16);
+  margin-bottom: 33px;
+}
+
+.spprt-cntn .secondary-btn {
+  border: 1px solid var(--secondary-color) !important;
+}
+
+/* Who We Are Section */
+
+.who-we-are-sec {
+  padding: 281px 0;
+  color: white;
+  border-radius: 0 0 11.979vw 11.979vw;
+  background: url("../assets/whowearebg.png") no-repeat center/cover;
+}
+
+.who-we-are-sec p {
+  max-width: 496px;
+  line-height: calc(24 / 16);
+  margin-bottom: 33px;
+}
+
+.who-we-are-sec .title2 {
+  max-width: 404px;
+  margin: 15px 0 31px;
+}
+
+.who-we-are-sec .primary-btn {
+  color: var(--tertiary-color);
+  border: 1px solid var(--tertiary-color);
+}
+
 @media screen and (max-width: 1200px) {
   .navbar-collapsed {
     position: fixed;
@@ -301,9 +406,29 @@ Banner Section
   }
 }
 
+@media screen and (max-width: 992px) {
+  .col-50 {
+    width: 100%;
+  }
+  .spprt-img {
+    margin-bottom: 30px;
+  }
+
+  /* Who We are Section */
+
+  .who-we-are-sec {
+    padding: 120px 0;
+    /* border-radius: 0 0 120px 120px; */
+  }
+}
+
 @media screen and (max-width: 768px) {
   .title-1 {
     font-size: 32px;
+  }
+
+  .title2 {
+    font-size: 28px;
   }
   .primary-btn,
   .secondary-btn {
@@ -333,4 +458,6 @@ Banner Section
     margin-left: 0px !important;
     margin-top: 30px;
   }
+
+  /* Support Section */
 }
