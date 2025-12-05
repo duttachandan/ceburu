@@ -14,6 +14,19 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- slick CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./Css/style.css" />
   </head>
@@ -154,5 +167,166 @@
         </div>
       </div>
     </section>
+
+    <!-- Future Section -->
+    <section class="future-sec">
+      <div class="container">
+        <div class="future-hdr">
+          <h2 class="title2">Lorem Ipsum is Simply</h2>
+          <p>
+            Our superpower is using internal and external data sets to create
+            better visibility into performance and opportunities. By delivering
+            those insights in a digestible format, we help create executive
+            alignment, and relieve friction between franchisors and franchisees.
+          </p>
+        </div>
+        <div class="future-video">
+          <img src="./assets/future-bg.png" alt="" />
+          <a class="video-btn" href="">
+            <img src="./assets/video.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-sec">
+      <div class="container">
+        <div class="testimonial-wrpr">
+          <div class="subtitle">Testimonials</div>
+          <h2 class="title2">
+            Real Experiences with Ceburu's Powerful Solutions
+          </h2>
+          <p>
+            Join the thousands of other people just like you who started using
+            Ceburu and took back control of their day.
+          </p>
+        </div>
+
+        <!-- Testimonial Slider -->
+        <div class="testimonial-slider">
+          <div>
+            <div class="slider-card">
+              <div class="person-details">
+                <img src="./assets/Group 1656.png" alt="" />
+                <div class="person-name">Acordis</div>
+              </div>
+              <div class="person-testimonials">
+                <q
+                  >Ceburu has truly transformed the way we manage our IT
+                  infrastructure. The AI-driven capabilities have allowed us to
+                  proactively monitor and address issues, saving us valuable
+                  time and resources. It's a game-changer in the industry, and
+                  we couldn't be happier with the results.</q
+                >
+              </div>
+              <div class="float-qu">
+                <img src="./assets/quote.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="slider-card">
+              <div class="person-details">
+                <img src="./assets/Group 1656.png" alt="" />
+                <div class="person-name">Acordis</div>
+              </div>
+              <div class="person-testimonials">
+                <q
+                  >Ceburu has truly transformed the way we manage our IT
+                  infrastructure. The AI-driven capabilities have allowed us to
+                  proactively monitor and address issues, saving us valuable
+                  time and resources. It's a game-changer in the industry, and
+                  we couldn't be happier with the results.</q
+                >
+              </div>
+              <div class="float-qu">
+                <img src="./assets/quote.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="slider-card">
+              <div class="person-details">
+                <img src="./assets/Group 1656.png" alt="" />
+                <div class="person-name">Acordis</div>
+              </div>
+              <div class="person-testimonials">
+                <q
+                  >Ceburu has truly transformed the way we manage our IT
+                  infrastructure. The AI-driven capabilities have allowed us to
+                  proactively monitor and address issues, saving us valuable
+                  time and resources. It's a game-changer in the industry, and
+                  we couldn't be happier with the results.</q
+                >
+              </div>
+              <div class="float-qu">
+                <img src="./assets/quote.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="slider-card">
+              <div class="person-details">
+                <img src="./assets/Group 1656.png" alt="" />
+                <div class="person-name">Acordis</div>
+              </div>
+              <div class="person-testimonials">
+                <q
+                  >Ceburu has truly transformed the way we manage our IT
+                  infrastructure. The AI-driven capabilities have allowed us to
+                  proactively monitor and address issues, saving us valuable
+                  time and resources. It's a game-changer in the industry, and
+                  we couldn't be happier with the results.</q
+                >
+              </div>
+              <div class="float-qu">
+                <img src="./assets/quote.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jquery CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Slick CDN -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <script>
+      $(document).ready(() => {
+        $(".testimonial-slider").slick({
+          // infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
   </body>
 </html>

@@ -12,6 +12,11 @@
   --tertiary-color: #ffffff;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -303,9 +308,24 @@ spprt-section
 
 .who-we-are-sec {
   padding: 281px 0;
+  position: relative;
   color: white;
   border-radius: 0 0 11.979vw 11.979vw;
   background: url("../assets/whowearebg.png") no-repeat center/cover;
+}
+
+.who-we-are-sec::after {
+  content: "";
+  position: absolute;
+  height: 335.35px;
+  width: 335.35px;
+  border-radius: 50%;
+  background: #2880b9;
+  filter: blur(400px);
+  bottom: calc(-335.35px / 2);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
 }
 
 .who-we-are-sec p {
@@ -322,6 +342,179 @@ spprt-section
 .who-we-are-sec .primary-btn {
   color: var(--tertiary-color);
   border: 1px solid var(--tertiary-color);
+}
+
+/* Future Section */
+
+.future-sec {
+  padding: 120px 0;
+}
+
+.future-hdr {
+  text-align: center;
+  margin-bottom: 46px;
+}
+
+.future-hdr > h2 {
+  max-width: 678px;
+  margin: 0 auto;
+}
+
+.future-hdr > p {
+  max-width: 835px;
+  margin: 0 auto;
+  margin-top: 28px;
+}
+
+.future-video {
+  max-width: 1212px;
+  margin: 0 auto;
+  border-radius: 25px;
+  position: relative;
+}
+
+.future-video > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.video-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 94px;
+  width: 94px;
+}
+
+.video-btn > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.video-btn::after {
+  content: "";
+  inset: -10px;
+  position: absolute;
+  background: rgba(255, 255, 255, 24%);
+  border-radius: 50%;
+}
+
+/* Testimoinial Section */
+
+.testimonial-sec {
+  padding: 281px 0;
+  color: var(--tertiary-color);
+  border-radius: 0 0 11.979vw 11.979vw;
+  background: url("../assets/testimonial-bg.png") no-repeat center/cover;
+}
+
+.testimonial-wrpr {
+  text-align: center;
+}
+
+.testimonial-wrpr .title2 {
+  max-width: 893px;
+  margin: 15px auto 31px;
+}
+
+.testimonial-wrpr p {
+  line-height: calc(24 / 16);
+  margin-bottom: 33px;
+}
+
+.slider-card {
+  position: relative;
+  padding: 35.61px 53px 70px 29.64px;
+  /* padding: 35.61px 29.64px 70px 29.64px; */
+  border-radius: 43.49px;
+  background: rgba(255, 255, 255, 5%);
+  border: 1.28px solid rgba(255, 255, 255, 10%);
+  backdrop-filter: blur(31.91px);
+  /* box-shadow: 19.15px 12.76px 10px rgba(0, 0, 0, 26%); */
+  /* max-width: 461px; */
+  margin: 77.86px 15px 90px;
+}
+
+.float-qu {
+  height: 77.86px;
+  width: 77.86px;
+  border-radius: 50px;
+  background: url("../assets/Rectangle.png") center/cover no-repeat;
+  border: 1.28px solid rgba(255, 255, 255, 10%);
+  backdrop-filter: blur(60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(-77.86px / 2);
+  right: 50.99px;
+}
+
+.float-qu > img {
+  width: 42.12px;
+  height: 35.74px;
+  object-fit: contain;
+}
+
+.person-details {
+  display: flex;
+  align-items: center;
+}
+
+.person-details > img {
+  height: 62.54px;
+  width: 62.54px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.person-name {
+  margin-left: 19.15px;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.person-testimonials {
+  margin-top: 40.97px;
+}
+
+.slick-next,
+.slick-prev {
+  z-index: 99;
+  height: 61.27px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 61.27px;
+  backdrop-filter: blur(200px);
+}
+
+.slick-next {
+  right: -12px;
+}
+
+.slick-prev {
+  left: -12px;
+}
+
+.slick-next::before {
+  content: "";
+  width: 22.98px;
+  height: 100%;
+  background: url("../assets/Vector.png") center/contain no-repeat;
+  display: inline-block;
+}
+
+.slick-prev::before {
+  content: "";
+  width: 22.98px;
+  height: 100%;
+  transform: rotate(180deg);
+  background: url("../assets/Vector.png") center/contain no-repeat;
+  display: inline-block;
 }
 
 @media screen and (max-width: 1200px) {
@@ -416,9 +609,19 @@ spprt-section
 
   /* Who We are Section */
 
-  .who-we-are-sec {
+  .who-we-are-sec,
+  .testimonial-sec {
     padding: 120px 0;
     /* border-radius: 0 0 120px 120px; */
+  }
+
+  /* Testimonial Section */
+  .slider-card {
+    padding: 20px 25px;
+  }
+
+  .float-qu {
+    right: 16.99px;
   }
 }
 
@@ -448,6 +651,10 @@ spprt-section
     margin-left: 10px !important;
   }
 
+  .navbar-collapsed {
+    width: 90%;
+  }
+
   /* Banner Section */
   .banner-btn {
     flex-direction: column;
@@ -459,5 +666,10 @@ spprt-section
     margin-top: 30px;
   }
 
-  /* Support Section */
+  /* Future Section */
+
+  .video-btn {
+    height: 54px;
+    width: 54px;
+  }
 }
